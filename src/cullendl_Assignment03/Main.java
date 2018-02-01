@@ -1,5 +1,9 @@
 package cullendl_Assignment03;
-
+/**
+ * Daniel Cullen and Ian Schwettman
+ * This project checks a big integer for prime-ness
+ * Code was based off of Proffessor Nicholson's.
+ */
 import java.lang.reflect.Array;
 import java.math.BigInteger;
 
@@ -17,10 +21,12 @@ public class Main {
 		
 	
 		
-		TestCase testCases[] = {
+		TestCase testCases[] = { //creates an array with numbers in it to check for prime
 				new TestCase("3", true),
 				new TestCase("1", false),
-				new TestCase("7", true)
+				new TestCase("7", true),
+				new TestCase("100000000000", false)
+				
 		};
 		int testsPassed = 0, testsFailed =0, testNumber=0;
 		
@@ -45,6 +51,8 @@ public class Main {
 		
 
 	}
+	
+	// allows for TestCase to have a number string and an assumed result.
 
 	private static class TestCase {
 		public TestCase(String test, boolean expectedResult) {this.test = test; this.expectedResult=expectedResult;};
